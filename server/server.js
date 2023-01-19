@@ -9,6 +9,7 @@ dotenv.config();
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
 });
+console.log(process.env.OPENAI_API_KEY);
 
 const openai = new OpenAIApi(configuration);
 
@@ -46,4 +47,4 @@ app.post('/', async (req, res) => {
     }
 })
 
-app.listen(5005, () => console.log('Server is running on port http://localhost:5005'));
+app.listen(5005, () => console.log('Server is running on port 5005'));

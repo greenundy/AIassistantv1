@@ -34,7 +34,7 @@ function typeText(element, text) {
 function generateUniqueID() {
   const timestamp = Date.now();
   const randomNumber = Math.random();
-  const hexadecimalString = randomNumber.toString(16);
+ const hexadecimalString = randomNumber.toString(16);
 
   return `id-${timestamp}-${hexadecimalString}`;
 }
@@ -80,7 +80,7 @@ const handleSubmit = async (e) => {
 
   // fetch response from server
 
-  const response = await fetch('http://localhost:5005', {
+  const response = await fetch('https://a-iassistantv1.vercel.app/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
