@@ -80,7 +80,7 @@ const handleSubmit = async (e) => {
 
   // fetch response from server
 
-  const response = await fetch('https://a-iassistantv1.vercel.app/', {
+  const response = await fetch('https://a-iassistantv1.vercel.app', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
