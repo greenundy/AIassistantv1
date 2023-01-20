@@ -11,7 +11,7 @@ function loader(element) {
   loadInterval = setInterval(() => {
     element.textContent += ".";
 
-    if (element.textContent.length === "....") {
+    if (element.textContent === "....") {
       element.textContent = "";
     }
   }, 300);
@@ -27,7 +27,7 @@ function typeText(element, text) {
     } else {
       clearInterval(interval);
     }
-  }, 200);
+  }, 50);
 }
 
 function generateUniqueID() {
