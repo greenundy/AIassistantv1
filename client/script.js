@@ -3,7 +3,6 @@ import user from "./assets/user.svg";
 
 const form = document.querySelector("form");
 const chatContainer = document.querySelector("#chat_container");
-
 let loadInterval;
 
 function loader(element) {
@@ -80,7 +79,7 @@ const handleSubmit = async (e) => {
 
   // fetch response from server
 
-  const response = await fetch('https://a-iassistantv1.vercel.app', {
+  const response = await fetch('https://aiassistant.onrender.com/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
