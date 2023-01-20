@@ -79,7 +79,7 @@ const handleSubmit = async (e) => {
 
   // fetch response from server
 
-  const response = await fetch('https://aiassistant.onrender.com/', {
+  const response = await fetch('http://localhost:5005/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

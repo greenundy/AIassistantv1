@@ -1,4 +1,3 @@
-// import packages 
 import express from 'express';
 import * as dotenv from 'dotenv';
 import cors from 'cors';
@@ -7,9 +6,9 @@ import { Configuration, OpenAIApi} from 'openai';
 dotenv.config();
 
 const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
+    organization: "org-am1zJg33B6oq8uLYbPXJbLsT",
+    apiKey: "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",
 });
-console.log(process.env.OPENAI_API_KEY);
 
 const openai = new OpenAIApi(configuration);
 
@@ -24,8 +23,9 @@ app.get('/', async (req, res) => {
 });
 
 app.post('/', async (req, res) => {
-    try{
-        const prompt = req.body.prompt;  
+    try {
+        const prompt = req.body.prompt; 
+
         const response = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: `${prompt}`,
@@ -43,8 +43,7 @@ app.post('/', async (req, res) => {
     } catch(error) {
         console.log(error);
         res.status(500).send({ error })
-
     }
 })
 
-app.listen(5005, () => console.log('Server is running on port 5005'));
+app.listen(5005, () => console.log('Server is running'));
