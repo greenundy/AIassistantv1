@@ -12,7 +12,7 @@ body {
 }
 
 .area{
-  background: #4e54c8;  
+  background: #111116;  
   background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
   width: 100%;
   height:93%;
@@ -140,8 +140,8 @@ body {
 #app {
   width: 100vw;
   height: 100vh;
-  background: #151515;
-  border:5px solid rgb(0, 0, 0);
+  background: #111111;
+  border:10px solid rgba(0, 0, 0, 0,3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -243,7 +243,8 @@ form {
   max-width: 1280px;
   margin: 0 auto;
   padding: 10px;
-  background: #5d6d57;
+  /* background gradient */
+  background: linear-gradient(90deg, #5436DA, #10a37f,#5436DA);
   border-radius:10px;
   display: flex;
   flex-direction: row;
